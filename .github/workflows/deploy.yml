@@ -12,7 +12,9 @@
       steps:
         - name: Checkout repository
           uses: actions/checkout@v3
-
+        - name: Checkout repository
+          uses: actions/setup-terraform@v2
+          
         - name: Authenticate to GCP
           uses: google-github-actions/auth@v1
           with:
