@@ -10,8 +10,8 @@ resource "google_cloud_run_service" "cloud_run" {
       containers {
         image = var.docker_image
         env {
-          name  = "BUCKET_NAME"
-          value = google_storage_bucket.bucket.name
+          name  = "cpt-bucket"
+          value = cpt-bucket
         }
       }
     }
