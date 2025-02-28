@@ -14,7 +14,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 EXPOSE 8080
 
 # Define environment variable
-ENV cpt_bucket
+ENV BUCKET=ctp_bucket
 
 # Run app.py when the container launches
 CMD ["python", "app.py"]
