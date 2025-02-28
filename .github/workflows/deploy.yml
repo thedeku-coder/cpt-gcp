@@ -25,7 +25,7 @@
 
         - name: Build and push Docker image
           run: |
-            gcloud builds submit --tag europe-west1-docker.pkg.dev/my-first-project-85838/flask-tp 
+           gcloud builds submit --tag gcr.io/my-first-project-85838/flask-app
         
 
         - name: Terraform Init
