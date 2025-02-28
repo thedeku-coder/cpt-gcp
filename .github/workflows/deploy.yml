@@ -23,9 +23,9 @@
           with:
             project_id: my-first-project-85838 
 
-        - name: Build and push Docker image
-          run: |
-           gcloud builds submit --tag gcr.io/my-first-project-85838/flask-app ./app
+        #- name: Build and push Docker image
+         # run: |
+         #  gcloud builds submit --tag gcr.io/my-first-project-85838/flask-app ./app
         
 
         - name: Terraform Init
