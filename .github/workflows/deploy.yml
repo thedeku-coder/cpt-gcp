@@ -25,9 +25,9 @@
 
         - name: Build and push Docker image
           run: |
-            gcloud builds submit --tag europe-west1-docker.pkg.dev/my-first-project-85838 /cloud-run-source-deploy/tp-app
+            gcloud builds submit --tag europe-west1-docker.pkg.dev/my-first-project-85838/tp-app ./app  
 
         - name: Deploy to Cloud Run
           run: |
-            gcloud run deploy tp-app --image=europe-west1-docker.pkg.dev/my-first-project-85838 /cloud-run-source-deploy/tp-app \
+            gcloud run deploy tp-app --image=europe-west1-docker.pkg.dev/my-first-project-85838/app\
               --platform=managed --region=europe-west1 --allow-unauthenticated
