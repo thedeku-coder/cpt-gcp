@@ -13,8 +13,8 @@
         - name: Checkout repository
           uses: actions/checkout@v3
 
-        - name: Checkout repository
-          uses: actions/terrafrom-setup@v2
+        - name: Set up Terraform
+          uses: hashicorp/setup-terraform@v1
 
         - name: Authenticate to GCP
           uses: google-github-actions/auth@v1
