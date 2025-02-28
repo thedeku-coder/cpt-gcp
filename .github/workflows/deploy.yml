@@ -26,8 +26,18 @@
         - name: Build and push Docker image
           run: |
             gcloud builds submit --tag europe-west1-docker.pkg.dev/my-first-project-85838/tp-app ./app  
+        
 
-        - name: Deploy to Cloud Run
+        - name: Terraform Init
+          run: terraform -chdir=./terraform/ init
+    
+        - name: Terraform Plan
+          run: terraform -chdir=./terraform/ plan
+    
+        - name: Terraform Apply
+          run: terraform -chdir=./terraform/ apply -auto-approve
+
+        - name: Deploy to Cloud Runca
           run: |
             gcloud run deploy tp-app --image=europe-west1-docker.pkg.dev/my-first-project-85838/app\
               --platform=managed --region=europe-west1 --allow-unauthenticated
